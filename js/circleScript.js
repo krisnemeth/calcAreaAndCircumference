@@ -15,8 +15,11 @@ document.getElementById('calculate').addEventListener('click', function(){
     } else {
         document.getElementById('answer').innerHTML += 'The area of the circle is: ' + calcArea(radiusInput).toFixed(2) + '<br><br>';
 
-        document.getElementById('answer').innerHTML += `The circumference of the circle is: ${calcCircum(radiusInput).toFixed(2)}`;
+        document.getElementById('answer').innerHTML += `The circumference of the circle is: ${calcCircum(radiusInput).toFixed(2)}`;    
     }
+    //clearing input, and setting focus back to the input field
+    document.getElementById('radius').value = '';
+    document.getElementById('radius').focus();
 })
 
 function calcArea(radiusValue){
