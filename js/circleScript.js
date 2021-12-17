@@ -13,19 +13,18 @@ document.getElementById('calculate').addEventListener('click', function(){
     } else if (isNaN(radiusInput)) {
         document.getElementById('answer').innerHTML = `It needs to be a number my friend. Math. With numbers, yes?`
     } else {
-        calcArea(radiusInput);
-        calcCircum(radiusInput);
+        document.getElementById('answer').innerHTML += 'The area of the circle is: ' + calcArea(radiusInput).toFixed(2) + '<br><br>';
+
+        document.getElementById('answer').innerHTML += `The circumference of the circle is: ${calcCircum(radiusInput).toFixed(2)}`;
     }
 })
 
-
-
 function calcArea(radiusValue){
-    let area = (pi * (radiusValue * radiusValue)).toFixed(2);
-    document.getElementById('answer').innerHTML += 'The area of the circle is: ' + area + '<br><br>';
+    let area = (pi * (radiusValue * radiusValue));
+    return area;
 }
 
 function calcCircum(radiusValue){
-    let circumference = (2 * pi * radiusValue).toFixed(2);
-    document.getElementById('answer').innerHTML += `The circumference of the circle is: ${circumference}`;
+    let circumference = (2 * pi * radiusValue);
+    return circumference;
 }
