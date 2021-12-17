@@ -16,11 +16,11 @@ document.getElementById('calculate').addEventListener('click', function(){
 
 
 function calcArea(radiusValue){
-    let area = (pi * (radiusValue * radiusValue));
+    let area = (pi * (radiusValue * radiusValue)).toFixed(2);
     document.getElementById('answer').innerHTML += 'The area of the circle is: ' + area + '<br><br>';
 }
 
 function calcCircum(radiusValue){
-    let circumference = (2 * pi * radiusValue);
+    let circumference = (2 * pi * radiusValue).toFixed(2);
     document.getElementById('answer').innerHTML += `The circumference of the circle is: ${circumference}`;
 }
