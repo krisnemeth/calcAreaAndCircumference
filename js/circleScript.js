@@ -6,11 +6,16 @@ document.getElementById('radius').focus();//focuses the cursor into the input fi
 document.getElementById('calculate').addEventListener('click', function(){
     // console.log('button clicked okay')
     document.getElementById('answer').innerHTML = '';
-
     let radiusInput = document.getElementById('radius').value;
-    
-    calcArea(radiusInput);
-    calcCircum(radiusInput);
+
+    if (radiusInput === '') {
+        document.getElementById('answer').innerHTML = `I'd enter a value for the radius if I were you.`
+    } else if (isNaN(radiusInput)) {
+        document.getElementById('answer').innerHTML = `It needs to be a number my friend. Math. With numbers, yes?`
+    } else {
+        calcArea(radiusInput);
+        calcCircum(radiusInput);
+    }
 })
 
 
