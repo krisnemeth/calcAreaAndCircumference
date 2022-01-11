@@ -6,7 +6,7 @@ document.getElementById('radius').focus();//focuses the cursor into the input fi
 document.getElementById('calculate').addEventListener('click', processInput);
 
 document.getElementById('radius').addEventListener('keyup', function(event){
-    if(event.keyCode === 13){
+    if(event.key === 'Enter'){
         processInput();
     }
 })
